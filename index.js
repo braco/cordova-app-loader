@@ -54,6 +54,7 @@ function AppLoader(options){
 }
 
 AppLoader.prototype._createFilemap = function(files){
+  if (!files) { return {}; }
   var result = {};
   var normalize = this.cache._fs.normalize;
   Object.keys(files).forEach(function(key){
